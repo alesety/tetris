@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
+<script>
+function setup(){
+  createCanvas(200,200);
+  background("#222222");
+  fill("#ffff00");
+  stroke("#000000");
+}
+function draw(){
+  if(keyIsPressed){
+    ellipse(mouseX,mouseY, 50, 50);
+  }
+  if(mouseIsPressed){
+    console.log("isPressed");
+  }
+}
+function mousePressed(){
+  fill("red");
+  console.log("pressed");
+}
+function mouseReleased(){
+  fill("green");
+  console.log("released");
+}
+function keyPressed(){
+  if(keyCode == UP_ARROW){
+    console.log("上");
+  }
+  if(keyCode == DOWN_ARROW){
+    console.log("下");
+  }
+  if(keyCode == LEFT_ARROW){
+    console.log("左");
+  }
+  if(keyCode == RIGHT_ARROW){
+    console.log("右");
+  }
+}
+</script>
+</head>
+<body>
+</body>
+</html>
